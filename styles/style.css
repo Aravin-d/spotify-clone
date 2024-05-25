@@ -649,7 +649,7 @@ header{
 .artist-title h2{
     color: #fff;
     font-size: 1.5rem;
-    font-family: spotify-bold;
+    font-family: spotify-title-bold;
     font-weight: 600;
 }
 
