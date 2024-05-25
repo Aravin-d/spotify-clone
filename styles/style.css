@@ -588,7 +588,7 @@ header{
 }
 
 .main-section-contents-container{
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     align-items: stretch;
     flex-wrap: nowrap;
@@ -597,6 +597,7 @@ header{
     scrollbar-width: none;
     height: 100%;
     width: 100%;
+    overflow-y: scroll;
 }
 
 .main-view{
@@ -779,6 +780,14 @@ header{
 .category-span div span{
     color: #a7a7a7;
     white-space: normal;
+}
+
+.album-container{
+    margin-block: 50px 0;
+}
+
+.album img{
+    border-radius: 6px;
 }
 
 footer{
