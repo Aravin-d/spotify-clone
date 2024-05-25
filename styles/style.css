@@ -592,7 +592,7 @@ header{
     display: flex;
     align-items: stretch;
     flex-wrap: nowrap;
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
     position: relative;
     scrollbar-width: none;
     height: 100%;
@@ -613,7 +613,7 @@ header{
 }
 
 .main-top-to-end-container{
-    /* padding-top: 8px; */
+    padding-top: 3px;
     background: transparent;
     isolation: isolate;
     display: block;
@@ -790,6 +790,131 @@ header{
     border-radius: 6px;
 }
 
+.main-footer-container{
+    background-color: #121212;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.main-footer-section{
+    background-color: #121212;
+    padding: 8px 16px 40px;
+    width: 100%;
+    display: block;
+}
+
+.main-footer-content{
+    margin-top: 32px;
+    display: flex;
+}
+
+.company-info{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.info-section{
+    margin-bottom: 32px;
+}
+
+.info-section ul{
+    padding-inline: 0px;
+    margin-block: 0;
+    overflow-wrap: break-word;
+    list-style: none;
+    list-style-type: none;
+}
+
+.info-section ul p{
+    color: #fff;
+    margin-block: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: spotify-bold;
+}
+
+.info-section ul a{
+    text-decoration: none;
+    margin: 8px 0;
+    width: fit-content;
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    font-family: spotify-bold;
+    color: #a7a7a7;
+}
+
+.info-section ul a span{
+    margin-block: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: spotify-medium;
+    padding-block-end: 8px;
+    color: inherit;
+}
+
+.socials-container{
+    margin-bottom: 40px;
+}
+
+.socials{
+    display: inline;
+    padding-right: 16px;
+}
+
+.socials a{
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    background-color: #292929;
+    position: relative;
+    justify-content: center;
+}
+
+.socials a svg{
+    fill: #fff;
+    width: 16px;
+    height: 16px;
+}
+
+hr{
+    --decorative: #292929;
+    border-color: #ffffff1a;
+    margin-block-start: 0;
+    border-block-start: 1px solid var(--decorative, #dedede);
+    margin-block-end: 20px;
+}
+
+.copyright-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+.copyright-content-section{
+    flex-direction: 0 0 auto;
+    display: flex;
+    flex-flow: row;
+    align-items: end;
+    color: #a7a7a7;
+}
+
+.copyright-content{
+    padding-right: 16px;
+}
+
+.copyright-content p{
+    margin-block: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-family: spotify-medium;
+    color: inherit;
+}
+
 footer{
     grid-area: footer;
     padding: 11px 24px 7px 15px;
@@ -859,11 +984,40 @@ footer button span{
     .category-span div span{
         font-size: 14px;
     }
+
+    .company-info{
+        flex-direction: row;
+    }
+
+    .info-section{
+        width: 40%;
+        margin-right: 24px;
+        margin-bottom: 32px;
+    }
 }
 
 @media only screen and (min-width: 990px){
     .artists-cards{
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .main-footer-section{
+        padding-left: 32px;
+        padding-right: 15px;
+    }
+
+    .info-section{
+        width: 20%;
+    }
+
+    .company-info{
+        flex: 1 1 50%;
+        padding-bottom: 0;
+    }
+
+    .copyright-content{
+        flex-flow: row;
+        align-items: start;
     }
 }
 
@@ -877,11 +1031,19 @@ footer button span{
     .artists-cards{
         grid-template-columns: repeat(5,minmax(0,1fr));
     }
+
+    aside{
+        width: 353px;
+    }
 }
 
 @media screen and (min-width:1720px){
     .artists-cards{
         grid-template-columns: repeat(6,minmax(0,1fr));
+    }
+
+    aside{
+        width: 420px;
     }
 }
 
